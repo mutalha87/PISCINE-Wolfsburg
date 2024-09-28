@@ -15,6 +15,7 @@ char	*ft_strupcase(char *str);
 char	*ft_strlowcase(char *str);
 char	*ft_strcapitalize(char *str);
 unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
+void	ft_putstr_non_printable(char *str);
 
 
 int main()
@@ -29,7 +30,7 @@ int main()
     char *sns = "01234567 89";
     char *ss = "abcdefghijklmnopqrstuvwxyz";
     char *sc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    char *snp = "\1\0\2\128";
+    char *snp = "\n\t\v\faAbBcC";
 	char *d;
 	d = (char *)malloc(strlen(s) + 1);
 	printf("\n\nTesting ex00 for character string\n");
@@ -154,5 +155,8 @@ int main()
     printf("\ndestination:\n %s", d);
     printf("\nsource:\n %s", sc);
 
+    printf("\n\nTesting ex11 for  mix string with non printable characters\n");
+    ft_putstr_non_printable(snp);
+
 }
-///command: cc testerC02.c ex00/ft_strcpy.c ex01/ft_strncpy.c ex02/ft_str_is_alpha.c ex03/ft_str_is_numeric.c ex04/ft_str_is_lowercase.c ex05/ft_str_is_uppercase.c ex06/ft_str_is_printable.c ex07/ft_strupcase.c ex08/ft_strlowcase.c ex09/ft_strcapitalize.c ex10/ft_strlcpy.c
+///command: cc testerC02.c ex00/ft_strcpy.c ex01/ft_strncpy.c ex02/ft_str_is_alpha.c ex03/ft_str_is_numeric.c ex04/ft_str_is_lowercase.c ex05/ft_str_is_uppercase.c ex06/ft_str_is_printable.c ex07/ft_strupcase.c ex08/ft_strlowcase.c ex09/ft_strcapitalize.c ex10/ft_strlcpy.c ex11/ft_putstr_non_printable(snp)
